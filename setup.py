@@ -24,4 +24,5 @@ setup(
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
     ],
+    scripts=['wylog']
 )
