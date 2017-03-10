@@ -27,6 +27,8 @@ D = 6
 # Stores current verbosity level
 VERBOSITY= 6
 
+PRINT_DEBUG= False
+
 
 # Where the log is stored
 LOG_PATH= os.path.dirname(__file__) + '/runtime/'
@@ -63,10 +65,9 @@ def log(msg, **kwargs):
     error=  kwargs.get('error')
     print_out= kwargs.get('print_out', True)
     log_path = kwargs.get('log_path')
-    process_debug_messages= kwargs.get('process_debug_messages', True)
     
     # Skip debug messages (unless turned on)
-    if (v >= 5) and (process_debug_messages is False): return False 
+    if (v >= 5) and (PRINT_DEBUG is False): return False 
     
     if log_path is None: log_path= LOG_PATH
     

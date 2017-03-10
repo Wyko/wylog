@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
@@ -10,19 +10,18 @@ def read(fname):
 
 setup(
     name = "wylog",
-    version = "0.0.1",
+    version = "1.0.0",
     author = "Wyko ter Haar",
     author_email = "vegaswyko@gmail.com",
     description = ("A collection of simple logging methods"),
     license = "MIT",
     keywords = "logging",
     url = "https://github.com/Wyko/wylog",
-    packages=['wylog'],
     long_description= read('README'),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
     ],
-    scripts=['wylog']
+    packages=find_packages()
 )
